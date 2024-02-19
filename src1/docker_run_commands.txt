@@ -1,8 +1,0 @@
-docker run -d -p 8081:8081 -e ME_CONFIG_MONGODB_SERVER=mongodb -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password --net mongo-network --name mongo-express mongo-express
-
-docker run -d -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --name mongodb --net mongo-network mongo
-
-docker run --name node --network mongo-network -v C:/Users/kalli/Desktop/src/app:/usr/src/app -w /usr/src/app -p 3000:3000 -d node npm start
-
-docker run --name my-app -p 3000:3000 -d 
-
